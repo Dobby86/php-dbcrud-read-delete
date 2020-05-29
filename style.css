@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: darkgrey;
+}
+h1 {
+    text-align: center;
+}
+i {
+    cursor: pointer;
+}
+.paganti {
+    width: 600px;
+    height: 100px;
+    margin: auto;
+    padding: 5px;
+    background-color: orange;
+    border: 1px solid black;
+}
