@@ -37,25 +37,30 @@ function init (){
   });
 }
 // azioniamo al click l'evento di delete
-        $('#target').on("click", ".delete", deletePagamento)
-        function deletePagamento() {
+        $('#target').on("click", ".delete", deletePaganti)
+
+        function deletePaganti() {
+
             var cancella = $(this);
-            var pagamentoHtml = cancella.parent();
-            var id = pagamentoHtml.data('id');
-            console.log(id);
+            var paganteHTML = cancella.parent();
+
+            var id = paganteHTML.data("id");
+
+              console.log('id' , id);
+
             $.ajax({
-                url:' deletePagamento.php ',
-                method : 'POST',
-                data: id,
-                success:function () {
-                    console.log("ok");
-                    pagamentoHtml.remove();
+                url:' deletePaganti.php ',
+                method : "POST",
+                data: {
+                    "id": id
+                },
+                success: function () {
+                    console.log("deleted");
+                    paganteHTML.remove();
                 },
                 error:function(err){
                     console.error(err);
                 }
-
-
             });
         }
 
