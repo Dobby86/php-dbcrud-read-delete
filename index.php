@@ -7,7 +7,7 @@ header('Content-Type:  application/json');
     $password = 'root';
     $dbName = 'newhoteltest';
 
-    //fornire i 4 dati che ha il phpmyadmin e  connettersi a questi(scrivere nello stesso ordine)
+    //fornire i 4 dati che ha il PhpMyAdmin e  connettersi a questi(scrivere nello stesso ordine)
 
     $conn = new mysqli($server, $username, $password, $dbName);
 //controllino
@@ -16,7 +16,7 @@ header('Content-Type:  application/json');
         echo $Sconn -> connect_errno;
         return;
     }
-//generiamo con un nome a caso(sql)
+//generiamo con un nome a caso(sql) i dati che vogliamo ricevere
     $sql = "
        SELECT  id, name, lastname
        FROM paganti

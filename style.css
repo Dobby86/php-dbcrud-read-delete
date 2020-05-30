@@ -20,3 +20,9 @@ i {
     background-color: orange;
     border: 1px solid black;
 }
+i{
+    color :red;
+}
+#titolo {
+    font-size: 40px;
+}

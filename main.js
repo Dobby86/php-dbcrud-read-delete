@@ -36,7 +36,30 @@ function init (){
      }
   });
 }
+// azioniamo al click l'evento di delete
+        $('#target').on("click", ".delete", deletePagamento)
+        function deletePagamento() {
+            var cancella = $(this);
+            var pagamentoHtml = cancella.parent();
+            var id = pagamentoHtml.data('id');
+            console.log(id);
+            $.ajax({
+                url:' deletePagamento.php ',
+                method : 'POST',
+                data: id,
+                success:function () {
+                    console.log("ok");
+                    pagamentoHtml.remove();
+                },
+                error:function(err){
+                    console.error(err);
+                }
 
-getAllPaganti();
+
+            });
+        }
+
+
+        getAllPaganti();
 }
 $(document).ready(init);
